@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+groq
+langgraph
+python-dotenv
+elevenlabs
+requests
+chromadb

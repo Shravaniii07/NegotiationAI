@@ -1,0 +1,123 @@
+.dashboard-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.dashboard-placeholder {
+    padding: 40px;
+    text-align: center;
+    color: #9ca3af;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #f3f4f6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #9ca3af;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.score-ring {
+    font-size: 28px;
+    font-weight: 800;
+    color: #6e8efb;
+    text-align: center;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(110, 142, 251, 0.4);
+}
+
+.score-card {
+    align-items: center;
+    background: rgba(110, 142, 251, 0.05);
+}
+
+.feedback-card {
+    grid-column: 1 / -1;
+    background: rgba(167, 119, 227, 0.05);
+}
+
+.feedback-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.research-card, .email-card {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.vendor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.vendor-table th {
+    text-align: left;
+    color: #6e8efb;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vendor-table td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+}
+
+.draft-item {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.email-preview {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #a777e3;
+}
