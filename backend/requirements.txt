@@ -6,3 +6,4 @@ python-dotenv
 elevenlabs
 requests
 chromadb
+duckduckgo-search
