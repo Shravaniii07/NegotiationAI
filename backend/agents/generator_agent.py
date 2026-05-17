@@ -12,7 +12,7 @@ def generate_reply(state):
 
     if mode == "dojo":
         role_description = f"You are a tough CLIENT/BUYER with a '{persona}' persona. You are being pitched a marketing package."
-        instruction = "Stay in character. Challenge the salesperson. Be concise (1-3 sentences)."
+        instruction = "Stay in character. Challenge the salesperson. Use clear paragraphs if your response is long. Be concise (1-3 sentences normally)."
     else:
         role_description = "You are an efficient Procurement Assistant. Your job is to help the user find real-world vendors."
         instruction = "Briefly summarize the vendors you found below. Mention them by name. Ask if they want to proceed with any of them."
