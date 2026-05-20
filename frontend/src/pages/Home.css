@@ -55,7 +55,7 @@
     flex-direction: column;
     font-weight: 700;
     line-height: 1.1;
-    font-size: 18px;
+    font-size: 24px;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -268,9 +268,11 @@
     .content-grid {
         grid-template-columns: 1fr;
     }
+
     .app-layout {
         flex-direction: column;
     }
+
     .sidebar {
         width: 100%;
         height: auto;

@@ -8,15 +8,20 @@ from typing import TypedDict
 
 class AgentState(TypedDict):
     input: str
-    mode: str  # 'dojo' or 'procurement'
+    mode: str
     persona: str 
     analysis: str
     personality: str
     strategy: str
     reply: str
     scorecard: dict
-    vendor_list: list  # New field for procurement
-    draft_emails: list # New field for procurement
+    vendor_list: list
+    draft_emails: list
+
+def route_after_strategy(state):
+    if state.get("mode") == "procurement":
+        return "research"
+    return "generate_reply"
 
 def build_graph():
     workflow = StateGraph(AgentState)
@@ -28,9 +33,20 @@ def build_graph():
     workflow.add_node("generate_reply", generate_reply)
 
     workflow.set_entry_point("analyze")
+
     workflow.add_edge("analyze", "detect_personality")
     workflow.add_edge("detect_personality", "decide_strategy")
-    workflow.add_edge("decide_strategy", "research")
+
+    # ✅ CONDITIONAL FLOW HERE
+    workflow.add_conditional_edges(
+        "decide_strategy",
+        route_after_strategy,
+        {
+            "research": "research",
+            "generate_reply": "generate_reply"
+        }
+    )
+
     workflow.add_edge("research", "generate_reply")
     workflow.add_edge("generate_reply", END)
 

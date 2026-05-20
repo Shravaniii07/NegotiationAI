@@ -19,8 +19,7 @@ def startup_event():
     load_market_data()
 
 app.include_router(negotiation.router)
-# app.include_router(voice.router) # Removed voice support
 
 @app.get("/")
 def home():
-    return {"message": "Sales Dojo & Procurement AI Running"}
+    return {"message": "DealCraft AI & Procurement Server Running"}

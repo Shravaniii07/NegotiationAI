@@ -50,10 +50,9 @@ export default function Home() {
         <div className="app-layout">
             <nav className="sidebar">
                 <div className="sidebar-logo">
-                    <div className="logo-icon">⚔️</div>
                     <div className="logo-text">
-                        <span>Sales</span>
-                        <span>Dojo AI</span>
+                        <span>DealCraft</span>
+                        <span>AI</span>
                     </div>
                     <button className="theme-toggle-btn" onClick={toggleTheme} title="Toggle Light/Dark Mode">
                         {theme === "dark" ? "☀️" : "🌙"}
@@ -62,14 +61,14 @@ export default function Home() {
 
                 <div className="nav-menu">
                     <span className="sidebar-section-title">Mode Selection</span>
-                    <button 
+                    <button
                         className={`nav-item ${mode === "dojo" ? "active" : ""}`}
                         onClick={() => { setMode("dojo"); handleReset(); }}
                     >
                         <span className="icon">🥋</span>
                         <span className="label">Training Dojo</span>
                     </button>
-                    <button 
+                    <button
                         className={`nav-item ${mode === "procurement" ? "active" : ""}`}
                         onClick={() => { setMode("procurement"); handleReset(); }}
                     >
@@ -122,14 +121,14 @@ export default function Home() {
 
                 <div className="content-grid">
                     <section className="primary-section glass-panel">
-                        <ChatBox 
-                            key={`${mode}-${persona}-${resetKey}`} 
-                            setLastData={setLastData} 
-                            mode={mode} 
-                            persona={persona} 
+                        <ChatBox
+                            key={`${mode}-${persona}-${resetKey}`}
+                            setLastData={setLastData}
+                            mode={mode}
+                            persona={persona}
                         />
                     </section>
-                    
+
                     <aside className="secondary-section">
                         <Dashboard data={lastData} mode={mode} />
                     </aside>
